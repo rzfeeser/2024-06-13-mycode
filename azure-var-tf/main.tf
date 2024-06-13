@@ -51,3 +51,8 @@ resource "azurerm_virtual_network" "example" {
   resource_group_name = azurerm_resource_group.rg.name
   address_space       = var.str_list
 }
+
+
+output "vnet_guid" {
+   value = azurerm_virtual_network.example.guid
+}
